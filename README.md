@@ -83,7 +83,7 @@ You can also deploy this notebook to **AWS** or **IBM Cloud** if you wish.
 
 ## Analysis
 
-Check the [Medium Post](https://medium.com/@luisgaravaso/this-will-make-us-brazilians-rethink-our-energy-investments-525b9c49a087) about it.
+Check the [Medium Post](https://luisgaravaso.medium.com/data-science-music-streaming-and-big-data-behold-the-sparkify-515062ce6c90) about it.
 
 ## Models Tuning/Refinement
 
