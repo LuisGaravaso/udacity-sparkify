@@ -11,6 +11,7 @@ In here you will find a small sample (128 Mb) of the actual data (12 Gb) that ca
 * [Usage](#Usage)
 * [Analysis](#Analysis)
 * [Results](#Results)
+* [Possible Improvements](#Possible-Improvements)
 * [Collaborating](#Collaborating)
 * [Future Work](#Future-Work)
 
@@ -84,12 +85,23 @@ You can also deploy this notebook to **AWS** or **IBM Cloud** if you wish.
 
 Check the [Medium Post](https://medium.com/@luisgaravaso/this-will-make-us-brazilians-rethink-our-energy-investments-525b9c49a087) about it.
 
+## Models Tuning/Refinement
+
+GridSearch was applied to the models using the `ParamGridBuilder()` and the `TrainValidationSplit()` instances.
+On my local machine with the small dataset, the *LogisticRegression* took about 1h30 testing 12 combinations and the *RandomForest* took about 55 minutes testing 9 combinations.
+
 ## Results
 
-1. The metric was **AUC**
+1. The metric was **AUC** which is default to Spark's `BinaryClassificationEvaluator` and it is widely used in binary and unbalanced classification.
 1. The **RandomForest** (0.96605) performed better than the **LogisticRegression** (0.91975)
 1. The **RandomForest** gave more importance to *time-related features* such as: `max and avg time between sessions` and did not ignore any feature.
 1. The **LogisticRegression** on the other hand gave little or zero importance to features found to be good during the **EDA**, such as: `max and avg time between sessions` and `gender`.
+
+## Possible Improvements
+
+1. **Testing other models**, such as *SupportVectorMachines* and *GradientBoostingMachines*.
+1. **Dropping Features**, such as Gender, that was not considered important in the end.
+1. **Engineering other features**, such as more time based features, like average song length.
 
 ## Collaborating
 
