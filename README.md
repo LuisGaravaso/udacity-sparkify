@@ -101,7 +101,10 @@ On my local machine with the small dataset, the *LogisticRegression* took about 
 
 1. **Testing other models**, such as *SupportVectorMachines* and *GradientBoostingMachines*.
 1. **Dropping Features**, such as Gender, that was not considered important in the end.
-1. **Engineering other features**, such as more time based features, like average song length.
+3. **Engineering other features**, such as more time based features, like average song length.
+4. **Model ensemble**, such as combining *LogisticRegression* and *RandomForest* predictions
+
+NOTE: dropping gender badly affected the models' AUC.
 
 ## Collaborating
 
